@@ -1,0 +1,39 @@
+python-3.11.0
+```
+
+---
+
+## How to Add These Files:
+
+### Via GitHub Web (Easiest):
+
+**For Procfile:**
+1. Go to: `https://github.com/your-username/MADE/tree/main/Backend`
+2. Click **"Add file"** → **"Create new file"**
+3. File name: `Procfile` (exactly this, capital P, no extension)
+4. Content: `web: uvicorn main:app --host 0.0.0.0 --port $PORT`
+5. Click **"Commit changes"**
+
+**For runtime.txt:**
+1. Same location
+2. Click **"Add file"** → **"Create new file"**
+3. File name: `runtime.txt`
+4. Content: `python-3.11.0`
+5. Click **"Commit changes"**
+
+---
+
+## Alternative: Railway Settings
+
+If files don't work, configure directly in Railway:
+
+1. Go to your Railway project
+2. Click on your service
+3. Click **"Settings"** tab
+4. Find **"Build Command"**:
+```
+   pip install -r requirements.txt
+```
+5. Find **"Start Command"**:
+```
+   uvicorn main:app --host 0.0.0.0 --port $PORT
