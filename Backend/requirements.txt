@@ -1,10 +1,5 @@
-fastapi
-uvicorn[standard]
-pymongo
-python-dotenv
-pydantic
-```
-
-3. Create `Procfile` in Backend folder:
-```
-web: uvicorn main:app --host 0.0.0.0 --port $PORT
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pymongo==4.6.0
+python-dotenv==1.0.0
+pydantic==2.5.0
