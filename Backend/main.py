@@ -359,9 +359,12 @@ async def health_check():
             "error": str(e)
         }
 
+# For Vercel deployment
+app = app
+
 if __name__ == "__main__":
     import uvicorn
-    print("\n Starting FastAPI server...")
-    print(" Server will run on: http://localhost:8000")
-    print(" API docs available at: http://localhost:8000/docs\n")
+    print("\n🔥 Starting FastAPI server...")
+    print("📍 Server will run on: http://localhost:8000")
+    print("📚 API docs available at: http://localhost:8000/docs\n")
     uvicorn.run(app, host="0.0.0.0", port=8000)
